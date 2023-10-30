@@ -3,22 +3,21 @@ package com.blm.minhasfinancas.model.repository;
 import java.util.Optional;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.blm.minhasfinancas.model.entily.Usuario;
 
-import lombok.Builder;
 
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
@@ -82,7 +81,7 @@ public class UsuarioRepositoryTest {
 	}
 	
 	@Test
-	public void deveRetornarVazioAoBuscarUsuarioPorEmailQuandoNaoExisteNaBasel() {		
+	public void deveRetornarVazioAoBuscarUsuarioPorEmailQuandoNaoExisteNaBase() {		
 		//cenario
 	
 		
@@ -94,7 +93,6 @@ public class UsuarioRepositoryTest {
 	
 	public static Usuario criarUsuario() {
 		return Usuario.builder().nome("usuario").email("usuario@email.com").build();
-		      	
-		
+		      		
 	}
 }
