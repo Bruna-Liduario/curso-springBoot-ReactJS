@@ -6,6 +6,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.test.context.ActiveProfiles;
@@ -17,7 +18,7 @@ import com.blm.minhasfinancas.model.entily.Usuario;
 import com.blm.minhasfinancas.model.repository.UsuarioRepository;
 import com.blm.minhasfinancas.service.impl.UsuarioServiceImpl;
 
-
+@SpringBootTest
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
 public class UsuarioServiceTest {
