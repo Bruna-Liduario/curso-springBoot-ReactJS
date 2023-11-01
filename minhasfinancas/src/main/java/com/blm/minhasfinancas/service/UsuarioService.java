@@ -1,5 +1,7 @@
 package com.blm.minhasfinancas.service;
 
+import java.util.Optional;
+
 import com.blm.minhasfinancas.model.entily.Usuario;
 
 public interface UsuarioService {
@@ -9,5 +11,7 @@ public interface UsuarioService {
 	Usuario salvarUsuario(Usuario usuario);
 	
 	void validarEmail(String email);
+	
+	Optional<Usuario> obterPorId(Long id);
 	
 }

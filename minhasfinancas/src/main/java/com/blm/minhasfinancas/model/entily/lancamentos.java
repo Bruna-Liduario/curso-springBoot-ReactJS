@@ -17,13 +17,17 @@ import javax.persistence.Table;
 import com.blm.minhasfinancas.model.enums.StatusLancamento;
 import com.blm.minhasfinancas.model.enums.TipoLancamento;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table (name = "lancamentos" , schema = "financas" )
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class lancamentos {
 	
 	@Id
